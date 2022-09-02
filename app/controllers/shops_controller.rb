@@ -1,5 +1,5 @@
 class ShopsController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[index show]
+  skip_before_action :authenticate_user!, only: %i[index edit]
 
   def index
     @shops = Shop.all
@@ -7,6 +7,11 @@ class ShopsController < ApplicationController
 
   def show
     @shop = Shop.find(params[:id])
+  end
+
+  def new
+    @shop = Shop.new
+    @shop.schedules.new
   end
 
   def edit
@@ -22,6 +27,14 @@ class ShopsController < ApplicationController
   private
 
   def shop_params
-    params.require(:shop).permit(:name)
+    params.require(:shop).permit(:name, schedules_attributes: %i[
+                                   id
+                                   morning_opens_at
+                                   morning_closes_at
+                                   afternoon_opens_at
+                                   afternoon_closes_at
+                                   weekday
+                                   _destroy
+                                 ])
   end
 end
