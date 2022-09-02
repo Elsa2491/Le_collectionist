@@ -1,0 +1,7 @@
+<h1>Les magasins</h1>
+<% @shops.each do |shop| %>
+  <ul>
+    <%= shop.name %>
+    <%= link_to 'Voir les horaires', shop_path(shop) %>
+  </ul>
+<% end  %>
