@@ -1,0 +1,57 @@
+<h1> <%= @shop.name %> </h1>
+
+<div class="container-fluid">
+  <div class="row h-100 justify-content-center align-items-center">
+    <div class="offset-md-1">
+      <div class="col-12 col-sm-4 col-md-3 offset-sm-2 offset-md-3">
+        <%= form_for @shop do |s| %>
+          <table class="schedule-editor">
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th class='text-center' colspan='2'>Morning</th>
+                <th class='text-center' colspan='2'>Afternoon</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% weekdays.each do |day| %>
+                <%= s.fields_for :schedules, s.object.schedules.find_or_initialize_by(weekday: day[:value]) do |sched| %>
+                <tr>
+                  <td>
+                    <%= sched.hidden_field :weekday %>
+                    <%= sched.label :_destroy, day[:label] %>
+                  </td>
+                  <td>
+                    <%= sched.label :morning_opens_at, class: "visually-hidden" %>
+                    <%= sched.time_field :morning_opens_at %>
+                  </td>
+                  <td>
+                    <%= sched.label :morning_closes_at, class: "visually-hidden" %>
+                    <%= sched.time_field :morning_closes_at %>
+                  </td>
+                  <td>
+                    <%= sched.label :afternoon_opens_at, class: "visually-hidden" %>
+                    <%= sched.time_field :afternoon_opens_at %>
+                  </td>
+                  <td>
+                    <%= sched.label :afternoon_closes_at, class: "visually-hidden" %>
+                    <%= sched.time_field :afternoon_closes_at %>
+                  </td>
+                </tr>
+                <% end %>
+              <% end %>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th>
+                  <%= s.submit %>
+                </th>
+              </tr>
+            </tfoot>
+          </table>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
