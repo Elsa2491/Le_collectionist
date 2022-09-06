@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users
-  resources :shops, only: [:index, :show, :edit, :update]
-  root to: 'shops#index'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  scope "(:locale)", locale: /fr|en/ do
+    devise_for :users
+    resources :shops, only: [:index, :edit, :update]
+    get "/change_locale", to: "sites#change_locale"
+    root to: 'shops#index'
+  end
 end

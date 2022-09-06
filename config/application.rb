@@ -26,7 +26,7 @@ module LeCollectionist
     config.i18n.default_locale = :fr
     # Permitted locales available for the application
     config.i18n.fallbacks = true
-    config.i18n.available_locales = [:en, :fr]
+    config.i18n.available_locales = [:fr, :en]
 
 
     # config/initializers/locale.rb
