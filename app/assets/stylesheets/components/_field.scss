@@ -1,0 +1,16 @@
+.CTA {
+  color: $gray;
+  border: 1px solid $light-gray;
+    border-radius: 4px;
+    margin-top: 33px;
+  a {
+     margin-right: 10px
+  }
+}
+
+.CTA {
+  &:hover {
+    text-decoration: none;
+    color: $light-gray;
+  }
+}

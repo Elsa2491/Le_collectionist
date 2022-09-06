@@ -43,7 +43,7 @@ en:
     sunday: "Sunday"
   schedule:
     index:
-      see_schedules: 'See schedules'
+      see_schedules: 'see schedules'
     edit:
       form:
         submit: 'Change schedules'
@@ -55,6 +55,7 @@ en:
   langage:
     french: 'French'
     english: 'English'
+  le_collectionist: 'Welcome to Le Collectionist'
 
 
 
