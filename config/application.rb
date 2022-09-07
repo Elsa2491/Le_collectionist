@@ -15,6 +15,7 @@ module LeCollectionist
     end
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
+    config.assets.initialize_on_precompile = false
 
     config.time_zone = 'UTC'
     # config.active_record.raise_in_transactional_callbacks = true
