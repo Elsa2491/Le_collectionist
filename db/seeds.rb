@@ -13,7 +13,7 @@ puts 'Database cleaned'
 
 puts 'Creating user'
 
-elsa = User.create!(email: 'lecollectionist@test.com', password: 'lecollectionist_test')
+elsa = User.create!(email: 'lecollectionist@test.com', password: 'lecollectionisttest')
 
 puts 'Creating shop'
 
