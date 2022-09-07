@@ -15,12 +15,11 @@ puts 'Creating user'
 
 elsa = User.create!(email: 'lecollectionist@test.com', password: 'lecollectionist_test')
 
-puts 'Creating shops'
+puts 'Creating shop'
 
-leroy_merlin = Shop.create!(user: elsa, name: "Leroy Merlin")
-maison_du_monde = Shop.create!(user: elsa, name: "Maison du monde")
-emma = Shop.create!(user: elsa, name: "Emma")
-swarovski = Shop.create!(user: elsa, name: "Swarovski")
-bo_mie = Shop.create!(user: elsa, name: "Bo&mie")
+audrey_langlois = Shop.create!(user: elsa, name: "Audrey Langlois bijouterie")
+histoire_d_une_fleur = Shop.create!(user: elsa, name: "L'histoire d'une fleur")
+bella_ciao = Shop.create!(user: elsa, name: "Bella Ciao")
 
-puts 'Shops created'
+
+puts 'Shop created'

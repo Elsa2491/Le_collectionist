@@ -1,13 +1,34 @@
 module ScheduleHelper
   def weekdays
     [
-      { label: "Monday", value: 1 },
-      { label: "Tuesday", value: 2 },
-      { label: "Wednesday", value: 3 },
-      { label: "Thursday", value: 4 },
-      { label: "Friday", value: 5 },
-      { label: "Saturday", value: 6 },
-      { label: "Sunday", value: 7 }
+      { label: t(
+        "weekedays.monday"
+      ), value: 1 },
+
+      { label:
+        t(
+          "weekedays.tuesday"
+        ), value: 2 },
+
+      { label: t(
+        "weekedays.wednesday"
+      ), value: 3 },
+
+      { label: t(
+        "weekedays.thursday"
+      ), value: 4 },
+
+      { label: t(
+        "weekedays.friday"
+      ), value: 5 },
+
+      { label: t(
+        "weekedays.saturday"
+      ), value: 6 },
+
+      { label: t(
+        "weekedays.sunday"
+      ), value: 7 }
     ]
   end
 end
