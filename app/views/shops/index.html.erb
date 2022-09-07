@@ -2,6 +2,24 @@
 <% @shops.each do |shop| %>
   <ul>
     <%= shop.name %>
-    <%= link_to 'Voir les horaires', edit_shop_path(shop) %>
+    <%= link_to(
+          t(
+            "schedule.index.see_schedules",
+          ), edit_shop_path(shop)) %>
   </ul>
 <% end  %>
+
+
+<%#=
+        link_to(
+          t(
+            "registrations.two_factor_authentification.activate",
+            default: "Activate",
+          ),
+          new_users_two_factor_authentication_path,
+          class: "btn btn-main",
+          "data-action": "turbo:click->modal#open",
+          "data-modal-class-names": "dialog--w1/3@xxl-up dialog--w1/2@l-up",
+          "data-turbo-frame": "modal__content",
+        )
+      %>

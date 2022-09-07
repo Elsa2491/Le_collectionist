@@ -30,4 +30,28 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  session:
+    form:
+      submit: "Continue"
+  weekedays:
+    monday: "Monday"
+    tuesday: "Tuesay"
+    wednesday: "Wednesday"
+    thursday: "Thursday"
+    friday: "Friday"
+    saturday: "Saturday"
+    sunday: "Sunday"
+  schedule:
+    index:
+      see_schedules: 'See schedules'
+    edit:
+      form:
+        submit: 'Change schedules'
+    title:
+      day: 'Days'
+      morning: 'Morning'
+      afternoon: 'Afternoon'
+  return: 'Return'
+
+
+

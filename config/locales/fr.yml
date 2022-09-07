@@ -1,0 +1,25 @@
+fr:
+  session:
+    form:
+      submit: 'Continuer'
+  weekedays:
+    monday: "Lundi"
+    tuesday: 'Mardi'
+    wednesday: 'Mercredi'
+    thursday: 'Jeudi'
+    friday: 'Vendredi'
+    saturday: 'Samedi'
+    sunday: 'Dimanche'
+  schedule:
+    index:
+      see_schedules: 'Voir les horaires'
+    edit:
+      form:
+        submit: 'Modifier les horaires'
+    title:
+      day: 'Jours'
+      morning: 'Matinées'
+      afternoon: 'Après-midi'
+  return: 'Retour'
+
+
