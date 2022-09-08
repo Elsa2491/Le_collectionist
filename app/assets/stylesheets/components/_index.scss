@@ -3,3 +3,19 @@
 @import "avatar";
 @import "form_legend_clear";
 @import "navbar";
+
+#see-schedule {
+   color: $light-gray;
+   font-size: 12px;
+   font-weight: 300;
+   &:hover {
+    text-decoration: none;
+    color: $gray;
+  }
+}
+
+#shops-index {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

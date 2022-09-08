@@ -1,26 +1,31 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div>
-    <%= link_to_unless I18n.locale == :en, t('langage.english'), change_locale_path(locale: :en) %> |
-    <%= link_to_unless I18n.locale == :fr, t('langage.french'), change_locale_path(locale: :fr) %>
-  </div>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon link-decoration">
+  <% if I18n.locale == :fr  %>
+    <%= link_to_unless I18n.locale == :en, t('langage.english'), change_locale_path(locale: :en), class:"link-decoration" do %><% end %>
+  <% else %>
+    <%= link_to_unless I18n.locale == :fr, t('langage.french'), change_locale_path(locale: :fr), class:"link-decoration" do %><% end %>
+  <% end %>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
-          <%= link_to(
-                      t(
-                        "devise.sessions.logout",
-                      ),
-                      destroy_user_session_path, method: :delete, class: "nav-link")
+          <%=
+            link_to(
+              t(
+              "devise.sessions.logout",
+              ),
+              destroy_user_session_path, method: :delete, class: "nav-link"
+            )
           %>
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to(
-                      t(
-                        "devise.sessions.login",
-                      ),
-                      new_user_session_path, class: "nav-link")
+          <%=
+            link_to(
+              t(
+                "devise.sessions.login",
+              ),
+              new_user_session_path, class: "nav-link"
+            )
           %>
         </li>
       <% end %>

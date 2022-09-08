@@ -1,25 +1,24 @@
-<h1>Les magasins</h1>
-<% @shops.each do |shop| %>
-  <ul>
-    <%= shop.name %>
-    <%= link_to(
-          t(
-            "schedule.index.see_schedules",
-          ), edit_shop_path(shop)) %>
-  </ul>
-<% end  %>
+<h1 id='le_collectionist_title'><%= t('le_collectionist') %></h1>
 
-
-<%#=
-        link_to(
-          t(
-            "registrations.two_factor_authentification.activate",
-            default: "Activate",
-          ),
-          new_users_two_factor_authentication_path,
-          class: "btn btn-main",
-          "data-action": "turbo:click->modal#open",
-          "data-modal-class-names": "dialog--w1/3@xxl-up dialog--w1/2@l-up",
-          "data-turbo-frame": "modal__content",
-        )
-      %>
+<div class="banner form_new_country">
+  <div class="container" id="edit_country_container">
+    <div class="row pt-5">
+      <div class="col-12 col-sm-8 col-md-4 offset-sm-2 offset-md-4">
+        <% @shops.each do |shop| %>
+          <ul>
+            <%= shop.name %>
+            <div>
+              <%=
+                link_to(
+                  t(
+                    "schedule.index.see_schedules",
+                  ),
+                edit_shop_path(shop), class: "link-decoration", id:'see-schedule')
+              %>
+            </div>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
