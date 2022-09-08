@@ -52,6 +52,9 @@ en:
       morning: 'Morning'
       afternoon: 'Afternoon'
   return: 'Return'
+  langage:
+    french: 'French'
+    english: 'English'
 
 
 
