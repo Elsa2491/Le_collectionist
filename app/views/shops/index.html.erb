@@ -1,4 +1,4 @@
-<h1 id='le_collectionist_title'><%= t('le_collectionist') %></h1>
+<h1 class='le_collectionist_title'><%= t('le_collectionist') %></h1>
 
 <div class="banner form_new_country">
   <div class="container" id="edit_country_container">
@@ -7,7 +7,7 @@
         <% @shops.each do |shop| %>
           <ul>
             <%= shop.name %>
-            <div>
+            <div id='see-schedule'>
               <%=
                 link_to(
                   t(

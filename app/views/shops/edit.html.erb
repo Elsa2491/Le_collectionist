@@ -1,4 +1,4 @@
-<h1 class='text-center'> <%= @shop.name %> </h1>
+<h1 class='le_collectionist_title'> <%= @shop.name %> </h1>
 
 <div class="container-fluid">
   <div class="row h-100 justify-content-center align-items-center">
@@ -53,6 +53,7 @@
                     <%= sched.label :afternoon_closes_at, class: "visually-hidden" %>
                     <%= sched.time_field :afternoon_closes_at %>
                   </td>
+
                 </tr>
                 <% end %>
               <% end %>
@@ -65,7 +66,7 @@
                       s.submit(
                         t(
                           "schedule.edit.form.submit",
-                        ),
+                        ),  class:"CTA"
                       )
                     %>
                   </th>
@@ -74,8 +75,10 @@
             <% end %>
           </table>
         <% end %>
-        <%= link_to(t("return"), root_path) %>
+        <%= render 'shops/footer' %>
       </div>
     </div>
   </div>
 </div>
+
+
